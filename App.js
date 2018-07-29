@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Header from './src/components/Header';
-import CourseList from './src/components/CourseList';
+import Header from './src/components/header/Header';
+import CourseList from './src/components/course/CourseList';
+import ScoreList from './src/components/score/ScoreList'
 
 export default class App extends React.Component {
   render() {

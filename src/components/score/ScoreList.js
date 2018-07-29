@@ -1,23 +1,23 @@
 import React, { Component } from 'react'
 import { ScrollView } from 'react-native'
 import axios from 'axios';
-import Course from './Course';
+import Score from './Score';
 
-export default class CourseFeed extends Component {
-  state = { courses: [{name: ''}]};
+export default class ScoreList extends Component {
+  state = { scores: [{score: ''}]};
 
   componentDidMount(){
     axios.get('http://localhost:3000/courses')
     .then(response => {
       console.log(response.status);
-      this.setState({ courses: response.data});
+      this.setState({ scores: response.data.scores});
     });
   }
   
   getCourses() {
-    return this.state.courses.map(course => {
+    return this.state.scores.map(score => {
       return (
-        <Course key={course.name} course={course} />
+        <Score key={score.score} score={score} />
       );
     })
   }
