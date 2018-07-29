@@ -1,0 +1,40 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Half Moon Bay Old Course",
+      "image": "https://www.visithalfmoonbay.org/sites/default/files/inline-images/Old%20Course_Ritz_photo1.jpg",
+      "par": 72,
+      "length": 7043,
+      "slope": 139,
+      "rating": 77.3
+    },
+    {
+      "id": 2,
+      "name": "Harpeth Hills Golf Course",
+      "image": "https://cdn.allsquaregolf.com/pictures/pictures/000/057/489/full/harpeth_hills_golf_course_cover_picture.jpg",
+      "par": 72,
+      "length": 6899,
+      "slope": 126,
+      "rating": 73.3
+    },
+    {
+      "id": 3,
+      "name": "The President's Reserve",
+      "image": "https://www.golfnow.com",
+      "par": 72,
+      "length": 7157,
+      "slope": 147,
+      "rating": 80.1
+    },
+    {
+      "id": 4,
+      "name": "Gaylord Springs Golf Links",
+      "image": "https://www.golfnow.com",
+      "par": 72,
+      "length": 7007,
+      "slope": 133,
+      "rating": 74.1
+    }
+  ]
+}
