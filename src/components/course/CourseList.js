@@ -2,20 +2,18 @@ import React, { Component } from 'react'
 import { ScrollView } from 'react-native'
 import axios from 'axios';
 import Course from './Course';
+import { connect } from 'react-redux';
+import { getCourses } from '../../actions';
 
-export default class CourseList extends Component {
-  state = { courses: [{name: ''}]};
+class CourseList extends Component {
+  state = { courses: [] };
 
   componentDidMount(){
-    axios.get('http://localhost:3000/courses')
-    .then(response => {
-      console.log(response.status);
-      this.setState({ courses: response.data});
-    });
+    this.props.getCourses();
   }
   
-  getCourses() {
-    return this.state.courses.map(course => {
+  renderCourses() {
+    return this.props.courses.map(course => {
       return (
         <Course key={course.name} course={course} />
       );
@@ -25,8 +23,17 @@ export default class CourseList extends Component {
   render() {
     return (
       <ScrollView>
-        {this.getCourses()}
+        {this.renderCourses()}
       </ScrollView>
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    courses: state.courses,
+    likes: state.likes
+  }
+}
+
+export default connect(mapStateToProps, { getCourses })(CourseList);
