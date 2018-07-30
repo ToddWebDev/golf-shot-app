@@ -7,10 +7,10 @@ export default class ScoreList extends Component {
   state = { scores: [{score: ''}]};
 
   componentDidMount(){
-    axios.get('http://localhost:3000/courses')
+    axios.get('http://localhost:3000/scores')
     .then(response => {
       console.log(response.status);
-      this.setState({ scores: response.data.scores});
+      this.setState({ scores: response.data});
     });
   }
   

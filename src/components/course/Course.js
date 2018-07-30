@@ -35,7 +35,7 @@ export default class Course extends Component {
             style={{width: null, height: 200}}
             source={{uri: this.props.course.image}} />
         </View>
-        <View style={styles.likeContainer}>
+        <View style={styles.courseRow}>
           <TouchableWithoutFeedback onPress={this.toggleLike.bind(this)}>
             <Ionicons
               name={this.state.likeIcon}
@@ -43,8 +43,6 @@ export default class Course extends Component {
               style={{color: this.state.likeIcon === 'ios-heart' ? 'red' : 'black'}}>
             </Ionicons>
           </TouchableWithoutFeedback>
-        </View>
-        <View style={styles.courseRow}>
           <Text style={styles.courseInfo}>Par: {this.props.course.par}</Text>
           <Text style={styles.courseInfo}>Length: {this.props.course.length} yards</Text>
         </View>
@@ -68,15 +66,12 @@ const styles = {
 
   courseRow: {
     flexDirection: 'row',
+    justifyContent: 'center'
   },
 
   courseInfo: {
     paddingRight: 10,
+    paddingTop: 8
   },
-
-  likeContainer: {
-    paddingTop: 10,
-    paddingBottom: 10
-  }
 
 }

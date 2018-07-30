@@ -6,9 +6,8 @@ export default class Score extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.scoreRow}>
-          <Text>{this.props.score.score}</Text>
-          <Text style={styles.scoreInfo}>Par: {this.props.course.par}</Text>
-          <Text style={styles.scoreInfo}>Length: {this.props.course.length} yards</Text>
+          <Text style={{fontSize: 22, paddingRight: 15}}>{this.props.score.score}</Text>
+          <Text style={styles.scoreInfo}>Par: {this.props.score.course}</Text>
         </View>
       </View>
     )

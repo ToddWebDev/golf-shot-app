@@ -21,7 +21,7 @@
     {
       "id": 3,
       "name": "The President's Reserve",
-      "image": "https://www.golfnow.com",
+      "image": "https://res.golfadvisor.com/app/courses/image/preview/41302.jpg",
       "par": 72,
       "length": 7157,
       "slope": 147,
@@ -30,11 +30,33 @@
     {
       "id": 4,
       "name": "Gaylord Springs Golf Links",
-      "image": "https://www.golfnow.com",
+      "image": "https://logos.bluegolf.com/springhouse/cover.jpg",
       "par": 72,
       "length": 7007,
       "slope": 133,
       "rating": 74.1
+    }
+  ],
+  "scores": [
+    {
+      "id": 1,
+      "score": 93,
+      "course": "Harpeth Hills Golf Course"
+    },
+    {
+      "id": 2,
+      "score": 84,
+      "course": "McCabe Golf Course"
+    },
+    {
+      "id": 3,
+      "score": 88,
+      "course": "Harpeth Hills Golf Course"
+    },
+    {
+      "id": 4,
+      "score": 97,
+      "course": "Hermitage Golf Club"
     }
   ]
 }
