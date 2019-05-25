@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { ScrollView } from 'react-native'
-import axios from 'axios';
 import Course from './Course';
 import { connect } from 'react-redux';
 import { getCourses } from '../../actions';
@@ -11,7 +10,7 @@ class CourseList extends Component {
   componentDidMount(){
     this.props.getCourses();
   }
-  
+
   renderCourses() {
     return this.props.courses.map(course => {
       return (
