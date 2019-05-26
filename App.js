@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import Header from './src/components/header/Header';
 import CourseList from './src/components/course/CourseList';
 import ScoreList from './src/components/score/ScoreList';
@@ -13,20 +13,11 @@ export default class App extends React.Component {
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
     return (
       <Provider store={store}>
-        <View>
+        <SafeAreaView>
           <Header title="Golf Shot" />
           <CourseList />
-        </View>
+        </SafeAreaView>
       </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#efefef',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

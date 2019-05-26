@@ -13,7 +13,7 @@ export default class ScoreList extends Component {
       this.setState({ scores: response.data});
     });
   }
-  
+
   getCourses() {
     return this.state.scores.map(score => {
       return (
