@@ -1,13 +1,14 @@
-import { TabNavigator } from 'react-navigation';
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import CourseList from '../components/course/CourseList';
 import ScoreList from '../components/score/ScoreList';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
-export const Tabs = TabNavigator({
-  CourseList: {
-    screen: CourseList,
-  },
-  ScoreList: {
-    screen: ScoreList,
-  },
-});
+const Tabs = createBottomTabNavigator(
+  {
+  Courses: CourseList,
+  Scores: ScoreList,
+  }
+);
+
+export default createAppContainer(Tabs);

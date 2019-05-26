@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView } from 'react-native';
 import Header from './src/components/header/Header';
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import Tabs from './src/config/Router'
 import CourseList from './src/components/course/CourseList';
 import ScoreList from './src/components/score/ScoreList';
 import { Provider } from 'react-redux';
@@ -13,9 +15,9 @@ export default class App extends React.Component {
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
     return (
       <Provider store={store}>
-        <SafeAreaView>
+        <SafeAreaView style={{flex: 1}}>
           <Header title="Golf Shot" />
-          <CourseList />
+          <Tabs />
         </SafeAreaView>
       </Provider>
     );
